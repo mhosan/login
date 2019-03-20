@@ -11,5 +11,7 @@ export class PrivadoPageComponent implements OnInit {
 
   ngOnInit() {
   }
-
+apretoBoton(){
+  alert("En caso de incendio boludo!!!");
+}
 }
