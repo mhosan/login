@@ -12,9 +12,11 @@ import { NotFoundPageComponent } from './componentes/not-found-page/not-found-pa
 import { AuthService } from './servicios/auth.service'
 import { FormsModule } from '@angular/forms'
 
-import { AngularFireModule} from '@angular/fire'
-import { AngularFireAuthModule} from '@angular/fire/auth'
+import { AngularFireModule} from '@angular/fire';
+import { AngularFireAuthModule} from '@angular/fire/auth';
 import { environment } from './../environments/environment';
+import { FlashMessagesModule } from 'angular2-flash-messages';
+import { FlashMessagesService } from 'angular2-flash-messages';
 
 @NgModule({
   declarations: [
@@ -31,9 +33,11 @@ import { environment } from './../environments/environment';
     AppRoutingModule,
     FormsModule,
     AngularFireAuthModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig)
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    FlashMessagesModule
+
   ],
-  providers: [ AuthService],
+  providers: [ AuthService, FlashMessagesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -27,7 +27,7 @@ export class AuthService {
     return this.afAuth.auth.signOut();
   }
 
-  loginUser(email: string, pass: string){      // <-------------------------------todo esto viene de la doc. de firebase authentication
+  loginEmail(email: string, pass: string){      // <-------------------------------todo esto viene de la doc. de firebase authentication
     return new Promise((resolve, reject)=>{
       this.afAuth.auth.signInWithEmailAndPassword(email, pass)
       .then (userData => resolve(userData),
